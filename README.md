@@ -3,11 +3,15 @@
 
 Welcome to the ALX SE Path System Engineering and DevOps Repository! This repository is a curated collection of programs and scripts specifically tailored for the System Engineering and DevOps curriculum at ALX.
 
----
+## Technologies
+* Scripts written in Bash 5.0.17(1)
+* Tested on Ubuntu 20.04 LTS
+
+## Projects
 Below is the specific list of projects included in this repository:
 
-- [0x00](./0x00-shell_basics) : Writing basic bash scripts that perform basic stuff.
-- [0x01](./0x01-shell_permissions) : Linux permissions.
+- [0x00](./0x00-shell_basics) : It aims to learn about basics commands, navigation, files and directories in **Shell**.
+- [0x01](./0x01-shell_permissions) : It aims to learn about permissions (owner, group and other) of files and directories in **Shell**.
 
 
 ## Author
