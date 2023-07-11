@@ -1,6 +1,6 @@
 # 0x02. Shell, I/O Redirections and filters
 
-Project done during **Full Stack Software Engineering studies** at **ALX**. It aims to learn about permissions (owner, group and other) of files and directories in **Shell**.
+Project done during **Full Stack Software Engineering studies** at **ALX**.  It aims to learn about how to handle standard input and output and how to combine commands and filters with redirections in **Shell**.
 
 ## Technologies
 * Scripts written in Bash 5.0.17(1)
