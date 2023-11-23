@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Purpose: Displays numbers from 1 to 20 along with specific messages for certain iterations.
+
+# Counter variable
+count=1
+
+# Loop until count is less than or equal to 20
+while [ $count -le 20 ]; do
+  # Display the current number
+  echo "$count"
+
+  # Check iteration count and display the corresponding message
+  case $count in
+    4) echo "bad luck from China";;
+    9) echo "bad luck from Japan";;
+    17) echo "bad luck from Italy";;
+  esac
+
+  ((count++))
+done

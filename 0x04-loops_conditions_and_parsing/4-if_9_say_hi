@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Purpose: Displays the message "Best School" 10 times using a while loop.
+#          On the 9th iteration, displays "Hi" before "Best School".
+
+# Counter variable
+count=0
+
+# Loop until count is less than 10
+while [ $count -lt 10 ]; do
+  # Check if it's the 9th iteration
+  if [ $count -eq 8 ]; then
+    echo "Hi"
+  fi
+  echo "Best School"
+  ((count++))
+done

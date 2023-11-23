@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Purpose: Prints the message "Best School" 10 times
+
+# Counter variable
+count=0
+
+# Loop to print the message 10 times
+while [ $count -lt 10 ]; do
+  echo "Best School"
+  count=$((count + 1))
+done

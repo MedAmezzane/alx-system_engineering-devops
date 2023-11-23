@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Purpose: Displays the message "Best School" 10 times using an until loop.
+
+# Counter variable
+count=0
+
+# Loop until count is equal to 10
+until [ $count -eq 10 ]; do
+  echo "Best School"
+  ((count++))
+done
