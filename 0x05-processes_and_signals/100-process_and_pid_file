@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Purpose: Creates a PID file, displays a message indefinitely, and reacts to signals.
+
+# Create PID file
+echo "$$" > /var/run/myscript.pid
+
+# Trap for SIGTERM
+trap "echo 'I hate the kill command'; rm /var/run/myscript.pid; exit" SIGTERM
+
+# Trap for SIGQUIT
+trap "rm /var/run/myscript.pid; exit" SIGQUIT
+
+# Trap for SIGINT
+trap "echo 'Y U no love me?!'" SIGINT
+
+# Main loop
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
