@@ -8,7 +8,7 @@ count=0
 # Loop until count is less than 10
 while [ $count -lt 10 ]; do
   # Check if it's the 9th iteration
-  if [ $count -eq 8 ]; then
+  if [ $count -eq 9 ]; then
     echo "Hi"
   fi
   echo "Best School"
