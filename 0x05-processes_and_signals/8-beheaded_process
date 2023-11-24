@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Purpose: Kills the "highlander" process using SIGKILL signal.
+
+pkill -f "highlander" --signal SIGKILL

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Purpose: Displays a list of currently running processes with specific criteria.
+
+ps axuf
