@@ -8,11 +8,11 @@
  */
 int infinite_while(void)
 {
-    while (1)
-    {
-        sleep(1);
-    }
-    return (0);
+	while (1)
+	{
+		sleep(1);
+	}
+	return (0);
 }
 
 /**
@@ -21,29 +21,29 @@ int infinite_while(void)
  */
 int main(void)
 {
-    int i;
-    pid_t zombie;
+	int i;
+	pid_t zombie;
 
-    for (i = 0; i < 5; i++)
-    {
-        /*Create a zombie process*/
-        zombie = fork();
+	for (i = 0; i < 5; i++)
+	{
+		/*Create a zombie process*/
+		zombie = fork();
 
-        if (zombie == -1)
-        {
-            perror("fork");
-            exit(EXIT_FAILURE);
-        }
+		if (zombie == -1)
+		{
+			perror("fork");
+			exit(EXIT_FAILURE);
+		}
 
-        if (!zombie)
-            return (0);
+		if (!zombie)
+			return (0);
 
-        /*Print the PID of the zombie process*/
-        printf("Zombie process created, PID: %d\n", zombie);
-    }
+		/*Print the PID of the zombie process*/
+		printf("Zombie process created, PID: %d\n", zombie);
+	}
 
-    /*Enter an infinite loop to keep the program running*/
-    infinite_while();
+	/*Enter an infinite loop to keep the program running*/
+	infinite_while();
 
-    return (0);
+	return (0);
 }
