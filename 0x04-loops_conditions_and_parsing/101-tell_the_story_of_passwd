@@ -2,7 +2,7 @@
 # Purpose: Displays a story with information from each line of /etc/passwd.
 
 input="/etc/passwd"
-while IFS=: read -r username password userid groupid userINFO homedir shell
+while IFS=: read -r username password userID groupID userINFO homeDIR shell
 do
-    echo "The user $username is part of the $groupid gang, lives in $userINFO, and rides $homedir:$shell. $userid's place is protected by the passcode $password. More info about the user here: $userINFO"
+    echo "The user $username is part of the $groupID gang, lives in $userINFO, and rides $homeDIR:$shell. $userID's place is protected by the passcode $password. More info about the user here: $userINFO"
 done < "$input"
