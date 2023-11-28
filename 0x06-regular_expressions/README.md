@@ -10,7 +10,7 @@ Project done during **Full Stack Software Engineering studies** at **ALX**. It a
 
 ### Mandatory tasks
 
-0. [`0-simply_match_holberton.rb`](./0-simply_match_holberton.rb) : A regular expression that matches `Holberton` 
+0. [`0-simply_match_holberton.rb`](./0-simply_match_holberton.rb) : A regular expression that matches `School` 
 1. [`1-repetition_token_0.rb`](./1-repetition_token_0.rb) A regular expression that matches `hbttn` 
 2. [`2-repetition_token_1.rb`](./2-repetition_token_1.rb) A regular expression that matches `htn` and `hbtn` 
 3. [`3-repetition_token_2.rb`](./3-repetition_token_2.rb) A regular expression that matches `hbtn`, where the letter `t` can be replied 
