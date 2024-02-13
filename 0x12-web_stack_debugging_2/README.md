@@ -1,6 +1,6 @@
 # 0x12. Web stack debugging #2
 
-Project done during **Full Stack Software Engineering studies** at **ALX**. It aims to learn about permissions (owner, group and other) of files and directories in **Shell**.
+Project done during **Full Stack Software Engineering studies** at **ALX**.
 This represented the third installment in a series of web stack debugging projects. In these assignments, I was provided with dysfunctional web stacks confined within isolated containers and tasked with restoring them to a functional state. For each task, I authored a script to automate the necessary commands for resolving issues within the web stack.
 
 ## Technologies
@@ -10,8 +10,6 @@ This represented the third installment in a series of web stack debugging projec
 ## Tasks
 
 ### Mandatory tasks
-
-## Tasks :page_with_curl:
 
 0. [Run software as another user](./0-iamsomeonelese): Bash script that runs the command `whoami` under the user passed as argument. Usage: `./0-iamsomeonelese <user>`
 1. [Run Nginx as Nginx](./1-run_nginx_as_nginx): Bash script that fixes a web server to run Nginx listening on port `8080` as the `nginx` user.
