@@ -20,7 +20,7 @@ This project involved deploying our AirBnB clone application. My task was to con
   * [3-app_server-nginx_config](./3-app_server-nginx_config): Nginx configuration file proxying requests on the route `/airbnb-dynamic/number_odd_or_even/<int: num>` to the Gunicorn app running on port `5000`.
 
 * **4. Let's do this for your API**
-  * In this task, I configured the API from my [AirBnB_clone_v3](https://github.com/Tijani1402/AirBnB_clone_v31) to run on Gunicorn.
+  * In this task, I configured the API from my [AirBnB_clone_v3](https://github.com/jzamora5/AirBnB_clone_v3) to run on Gunicorn.
   * [4-app_server-nginx_config](./4-app_server-nginx_config): Nginx configuration file that proxies requests on the AirBnB API to the corresponding Gunicorn app.
 
 * **5. Serve your AirBnB clone**
