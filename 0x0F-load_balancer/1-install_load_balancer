@@ -42,8 +42,8 @@ frontend AMEZZANE-tech-frontend
 
 backend AMEZZANE-tech-backend
     balance roundrobin
-    server 464485-web-01 34.232.76.69:80 check
-    server 464485-web-02 35.168.1.67:80 check
+    server 464485-web-01 100.25.177.142:80 check
+    server 464485-web-02 100.25.197.223:80 check
 "
 
 # shellcheck disable=SC2154
