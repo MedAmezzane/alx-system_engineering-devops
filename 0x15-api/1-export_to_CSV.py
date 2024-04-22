@@ -42,9 +42,9 @@ if __name__ == "__main__":
     # Open the CSV file in write mode
     with open(filename, mode='w') as employee_file:
         employee_writer = csv.writer(employee_file,
-                                      delimiter=',',
-                                      quotechar='"',
-                                      quoting=csv.QUOTE_ALL)
+                                     delimiter=',',
+                                     quotechar='"',
+                                     quoting=csv.QUOTE_ALL)
 
         # Write each task as a row in the CSV file
         for task in l_task:
