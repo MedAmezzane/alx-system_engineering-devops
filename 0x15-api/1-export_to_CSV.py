@@ -7,29 +7,45 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    # Extract employee ID from command-line argument
-    user_id = sys.argv[1]
+    # Define the base URL for the JSONPlaceholder API
+    url = 'https://jsonplaceholder.typicode.com/'
 
-    # Base URL for the JSONPlaceholder API
-    url = "https://jsonplaceholder.typicode.com/"
+    # Get the user ID from the command line argument
+    userid = sys.argv[1]
 
-    # Retrieve user information for the specified employee ID
-    user = requests.get(url + "users/{}".format(user_id)).json()
+    # Construct the URL to retrieve user information based on the user ID
+    user = '{}users/{}'.format(url, userid)
+    res = requests.get(user)
+    json_o = res.json()
 
-    # Extract username from user information
-    username = user.get("username")
+    # Get the username from the user information
+    name = json_o.get('username')
 
-    # Retrieve to-do list for the specified employee ID
-    todos = requests.get(url + "todos", params={"userId": user_id}).json()
+    # Construct the URL to retrieve tasks for the user
+    todos = '{}todos?userId={}'.format(url, userid)
+    res = requests.get(todos)
+    tasks = res.json()
 
-    # Create and write to CSV file
-    with open("{}.csv".format(user_id), "w", newline="") as csvfile:
-        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+    # Create a list to store task information
+    l_task = []
 
-        # Write CSV header
-        writer.writerow(["User ID", "Username", "Completed", "Title"])
+    # Loop through the tasks and append task details to the list
+    for task in tasks:
+        l_task.append([userid,
+                       name,
+                       task.get('completed'),
+                       task.get('title')])
 
-        # Write each to-do item to the CSV file
-        [writer.writerow(
-            [user_id, username, t.get("completed"), t.get("title")]
-         ) for t in todos]
+    # Create a filename for the CSV file based on the user ID
+    filename = '{}.csv'.format(userid)
+
+    # Open the CSV file in write mode
+    with open(filename, mode='w') as employee_file:
+        employee_writer = csv.writer(employee_file,
+                                      delimiter=',',
+                                      quotechar='"',
+                                      quoting=csv.QUOTE_ALL)
+
+        # Write each task as a row in the CSV file
+        for task in l_task:
+            employee_writer.writerow(task)
